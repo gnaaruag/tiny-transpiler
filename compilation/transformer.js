@@ -9,10 +9,12 @@ module.exports = function transformer(originalAST) {
 
   traverse(originalAST, {
     NumberLiteral(node) {
-      position.push({
+      position.push(
+        {
         type: 'NumericLiteral',
         value: node.value
-      });
+      }
+      );
     },
     CallExpression(node, parent) {
       let expression = {
@@ -26,7 +28,8 @@ module.exports = function transformer(originalAST) {
       const prevPosition = position;
       position = expression.arguments;
       if (parent.type !== 'CallExpression') {
-        expression = {
+        expression = 
+        {
           type: 'ExpressionStatement',
           expression
         };
