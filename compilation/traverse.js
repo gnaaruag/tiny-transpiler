@@ -6,7 +6,8 @@ module.exports = function traverse(ast, visitors) {
       }
       if (node.type === 'Program') {
         walkNodes(node.body, node);
-      } else if (node.type === 'CallExpression') {
+      } 
+      else if (node.type === 'CallExpression') {
         walkNodes(node.params, node);
       }
     }
