@@ -1,6 +1,6 @@
 #  Tiny-Transpiler
 
-**almost all functionality is yet to be added**
+## this project is abandoned
 
 **proof of concept only**
 
